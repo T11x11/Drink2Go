@@ -1,0 +1,28 @@
+.navigation .leaflet-top,
+.navigation .leaflet-bottom {
+  display: none;
+}
+
+.navigation__map {
+  width: 100%;
+  min-height: 420px;
+  max-width: 1440px;
+  margin: 0 auto;
+  background: url("../../img/map-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+
+  @media (min-width: $tablet-width) {
+    min-height: 480px;
+    background: url("../../img/map-tablet.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 540px;
+    background: url("../../img/map-desktop.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+}

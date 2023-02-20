@@ -1,0 +1,155 @@
+.main-footer__container {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    grid-template-rows: 1fr min-content;
+  }
+}
+
+.main-footer__nav {
+  .main-footer__contacts {
+    padding-bottom: 6px;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 29px;
+    padding-left: 18px;
+    grid-column: 2/4;
+  }
+}
+
+.main-footer__store,
+.main-footer__media,
+.main-footer__contacts {
+  padding: 20px 20px 10px 20px;
+  text-align: start;
+  border-bottom: 1px solid $base-secondary;
+
+  @media (min-width: $tablet-width) {
+    border-bottom: none;
+  }
+}
+
+.main-footer__media {
+  @media (min-width: $tablet-width) {
+    padding-left: 54px;
+  }
+}
+
+.main-footer__item {
+  margin-bottom: 18px;
+}
+
+.main-footer__title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  color: $base-primary;
+  margin-bottom: 18px;
+}
+
+.main-footer__link {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    color: $primary-lighter;
+  }
+
+  &:active {
+    color: $primary-darker;
+  }
+}
+
+.main-footer__contacts {
+  @media (min-width: $tablet-width) {
+    width: 223px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 337px;
+  }
+
+  .main-footer__link {
+    display: flex;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-transform: none;
+  }
+
+  .main-footer__item {
+    margin-bottom: 14px;
+  }
+}
+
+.main-footer__link-icon {
+  margin-top: 3px;
+  margin-right: 6px;
+  color: $base-primary;
+}
+
+.main-footer__contacts-text {
+  width: 261px;
+  padding-top: 2px;
+  letter-spacing: 0;
+
+  @media (min-width: $desktop-width) {
+    width: 337px;
+  }
+}
+
+.main-footer__copyright {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  padding: 20px 20px 30px 20px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: $base-grey;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 8px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
+    grid-row: 2/3;
+    grid-column: -1/1;
+  }
+}
+
+.main-footer__copyright-text {
+  margin-right: 3px;
+  letter-spacing: 0;
+}
+
+.main-footer__copyright-image {
+  margin-top: 2px;
+  margin-left: 4px;
+}
+
+.main-footer__copyright-logo {
+  display: flex;
+
+  &:hover,
+  &:focus {
+    color: $base-primary;
+  }
+
+  &:active {
+    color: $primary-darker;
+  }
+}

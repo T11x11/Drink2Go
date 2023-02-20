@@ -1,0 +1,93 @@
+.swiper {
+  width: 100vw;
+  min-width: 320px;
+}
+
+.swiper__slide {
+  &--decaf {
+    background-color: $flat-white;
+
+    @media (min-width: $tablet-width) {
+      background: linear-gradient(180deg, $flat-white 77%, transparent 50%);
+    }
+
+    @media (min-width: $desktop-width) {
+      background: $flat-white;
+    }
+  }
+
+  &--lavender {
+    background-color: $lavender-latte;
+
+    @media (min-width: $tablet-width) {
+      background: linear-gradient(180deg, $lavender-latte 77%, transparent 50%);
+    }
+
+    @media (min-width: $desktop-width) {
+      background: $lavender-latte;
+    }
+  }
+
+  &--espresso {
+    background-color: $espresso;
+
+    @media (min-width: $tablet-width) {
+      background: linear-gradient(180deg, $espresso 77%, transparent 50%);
+    }
+
+    @media (min-width: $desktop-width) {
+      background: $espresso;
+    }
+  }
+}
+
+.swiper .swiper__pagination {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    display: block;
+    bottom: 66px;
+  }
+}
+
+.swiper .swiper-pagination-bullet {
+  border-radius: 0;
+  height: 4px;
+  width: 62px;
+  background-color: $base-white;
+  opacity: 1;
+
+  &:hover {
+    background-color: $primary-opacity;
+  }
+}
+
+.swiper .swiper-pagination-bullet-active {
+  background-color: $base-primary;
+}
+
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next {
+  color: $base-primary;
+}
+
+.swiper .swiper-button-prev {
+  @media (min-width: $tablet-width) {
+    left: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: 50px;
+  }
+}
+
+.swiper .swiper-button-next {
+  @media (min-width: $tablet-width) {
+    right: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 50px;
+  }
+}

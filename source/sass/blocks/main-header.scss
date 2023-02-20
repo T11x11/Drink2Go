@@ -1,0 +1,109 @@
+.main-header {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.main-header__menu {
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 40px;
+  }
+}
+
+.main-header__menu--closed .header-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  left: 22px;
+  width: 16px;
+  height: 2px;
+  background-color: $base-black;
+  box-shadow: 0 5px 0 0 $base-black, 0 10px 0 0 $base-black;
+}
+
+.main-header__menu--opened .header-nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    width: 16px;
+    height: 2px;
+    background-color: $base-black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.main-header__menu--opened .header-nav__list {
+  @media (max-width: $mobile-width-only) {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    background-color: $base-white;
+    z-index: 99;
+    border-bottom: 1px solid $light-grey;
+  }
+}
+
+.main-header__menu--nojs .header-nav {
+  @media (max-width: $mobile-width-only) {
+    margin-top: 60px;
+    position: relative;
+    width: 100%;
+    margin-left: -70px;
+    box-sizing: border-box;
+  }
+}
+
+.main-header__menu--nojs .header-nav__list {
+  @media (max-width: $mobile-width-only) {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: -8px;
+  }
+}
+
+.main-header__menu--nojs .header-nav__toggle {
+  display: none;
+}
+
+.main-header__menu--nojs .main-header__user {
+  @media (max-width: $mobile-width-only) {
+    position: absolute;
+    right: -40px;
+  }
+}
+
+.main-header__logo {
+  display: flex;
+  gap: 20px;
+}
+
+.main-header__nav,
+.main-header__user {
+  margin-left: auto;
+}

@@ -1,0 +1,137 @@
+.slide {
+  padding: 20px 20px 60px 20px;
+  min-height: 656px;
+
+  @media (min-width: $tablet-width) {
+    padding: 60px 80px 0 80px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 30px 80px 75px 105px;
+    flex-direction: row;
+  }
+}
+
+.slide__price-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.slide__image {
+  margin-bottom: 5px;
+
+  @media (min-width: $tablet-width) {
+    height: 476px;
+    width: 476px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 600px;
+    width: 600px;
+  }
+}
+
+.slide__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 149px;
+    padding-left: 30px;
+    width: 590px;
+    align-items: start;
+  }
+}
+
+.slide__title {
+  margin: 0;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 48px;
+  margin-bottom: 10px;
+  letter-spacing: 0.02em;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 16px;
+    font-size: 56px;
+    line-height: 80px;
+  }
+}
+
+.slide__description {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-bottom: 20px;
+
+  br {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 0 10px;
+    font-size: 20px;
+    line-height: 32px;
+
+    br {
+      display: block;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 40px;
+    padding-left: 0;
+    text-align: start;
+  }
+}
+
+.slide__price-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  min-width: 230px;
+}
+
+.slide__price-old {
+  margin-right: 6px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  color: $base-primary;
+  text-decoration: line-through;
+}
+
+.slide__price {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.slide__button {
+  padding: 8px 20px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: $base-white;
+  background-color: $base-primary;
+
+  &:hover,
+  &:focus {
+    background-color: $primary-lighter;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+  }
+}

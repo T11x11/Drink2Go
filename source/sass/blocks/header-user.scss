@@ -1,0 +1,51 @@
+.header-user__list {
+  display: flex;
+  padding-right: 40px;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 18px;
+  }
+}
+
+.header-user__link {
+  display: flex;
+  padding: 22px;
+
+  @media (min-width: $tablet-width) {
+    padding: 32px 22px;
+  }
+
+  &:active {
+    background-color: $base-secondary;
+  }
+
+  @media (min-width: $tablet-width) {
+    &:hover,
+    &:focus {
+      color: $base-primary;
+      background-color: transparent;
+    }
+
+    &:active {
+      background-color: $base-secondary;
+    }
+  }
+}
+
+.header-user__link span {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.header-user__item-icon {
+  @media (min-width: $desktop-width) {
+    margin-right: 8px;
+  }
+}

@@ -1,0 +1,13 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  font-family: "Montserrat", "Arial", sans-serif;
+  border: none;
+  border-radius: 4px;
+
+  &--disabled {
+    background-color: $base-grey;
+  }
+}
